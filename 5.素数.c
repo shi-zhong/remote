@@ -6,7 +6,7 @@ int main(void){
 			if (i%j==0) {flag=0;break;}
 		}
 		if (flag) {printf("%d;",i);turn++;}
-		if (turn%5==0) {printf("\n");turn=1;}/*·ê5»»ĞĞ*/ 
+		if (turn%5==0) {printf("\n");turn=1;}/*é€¢5æ¢è¡Œ*/ 
 		
 	}
 	return 0;

@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main(void){
-	int a,b,c,d; /*a,bÎªÁ½Êý£¬cÎªÈÝÆ÷£¬d´æÓàÊý*/ 
-	printf("µÚÒ»¸öÊý£º");scanf("%d",&a);
-	printf("µÚ¶þ¸öÊý£º");scanf("%d",&b); 
-	if (a<b) {c==a;a==b;b==c;}/*È·±£a>b*/
+	int a,b,c,d; /*a,bä¸ºä¸¤æ•°ï¼Œcä¸ºå®¹å™¨ï¼Œdå­˜ä½™æ•°*/ 
+	printf("ç¬¬ä¸€ä¸ªæ•°ï¼š");scanf("%d",&a);
+	printf("ç¬¬äºŒä¸ªæ•°ï¼š");scanf("%d",&b); 
+	if (a<b) {c==a;a==b;b==c;}/*ç¡®ä¿a>b*/
 	d=a%b; 
 	while(d!=0){
 		a=b;b=d;d=a%b;

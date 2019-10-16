@@ -1,26 +1,28 @@
 #include <stdio.h>
 int main(void)
 {
-	int side[3];
-	int i,j;
-	printf("µÚ1¸öÊı:");scanf("%d",&side[0]);
-	printf("µÚ2¸öÊı:");scanf("%d",&side[1]);
-	printf("µÚ3¸öÊı:");scanf("%d",&side[2]);
-	printf("·µ»ØÖµ£º");/*ÊäÈë*/ 
-	for(i=0;i<=1;i++)
-		for(j=1;j<=2;j++)
-			if (side[i]>side[j]) {
-				side[3]=side[i];side[i]=side[j];side[j]=side[3];
-			}	/*Èı±ßÅÅĞò*/	
-	if ((side[0]+side[1])>side[2])/*ÅĞ¶ÏÊÇ·ñÊÇÈı½ÇĞÎ*/{ 
-		if (side[0]==side[1]&&side[1]==side[2])
-			printf("1"); 
-		else if(side[0]==side[1]||side[1]==side[2])
-			printf("2");
-		else
-			printf("3");\
-		}
-	else
-		printf("0");
-		return 0;
+        int side[3];
+        int i,j;
+        printf("ç¬¬ä¸€ä¸ªæ•°:");scanf("%d",&side[0]);
+        printf("ç¬¬äºŒä¸ªæ•°:");scanf("%d",&side[1]);
+        printf("ç¬¬ä¸‰ä¸ªæ•°:");scanf("%d",&side[2]);
+	printf("è¿”å›å€¼");/*è¾“å…¥*/ 
+        for(i=0;i<=1;i++)
+                for(j=1;j<=2;j++)
+                        if (side[i]>side[j]) {
+                                side[3]=side[i];side[i]=side[j];side[j]=side[3];
+                        }       /*ä¸‰è¾¹æ’åº*/
+        if ((side[0]+side[1])>side[2])/*åˆ¤æ–­æ˜¯å¦æ˜¯ä¸‰è§’å½¢*/{ 
+                if (side[0]==side[1]&&side[1]==side[2])
+                        printf("1");
+                else if(side[0]==side[1]||side[1]==side[2])
+                        printf("2");
+                else
+                        printf("3");
+                }
+        else
+	printf("0");
+	printf("\n");
+	return 0;
 }
+

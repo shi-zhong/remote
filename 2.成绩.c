@@ -9,8 +9,8 @@ int result(int i,int j){
 int main (void)
 {
 	int a,b;
-	printf("��һ�ſΣ�");scanf("%d",&a);
-	printf("�ڶ��ſΣ�");scanf("%d",&b);
+	printf("第一门课：");scanf("%d",&a);
+	printf("第二门课：");scanf("%d",&b);
 	switch(result(a,b)){
 		case 1:puts("It is pass.");break;
 		case 2:puts("It is not pass.");break;

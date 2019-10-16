@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #define MAXZS 10 /*最大组数*/
 int main (void)
-{	int a[MAXZS][99]={{0}};
+{	int a[MAXZS][100]={{0}};
 	int i=0,j=0,m=0,n=0,temp;
 	do{/*读取组数*/
 		for(j=0;j<=a[i][0];j++)
