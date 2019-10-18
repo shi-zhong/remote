@@ -1,0 +1,38 @@
+#include<stdio.h>
+#define MAXG 10
+int main(void){
+	int info[MAXG][2];/*存入m.n*/
+	int score[MAXG][50][5];/*存入score[组数][学生数][课程数]*/
+	int sum=0,top=0,group=0;/*优等生*//*标记组数*/
+	double aver1[MAXG][5],aver2[MAXG][50];/*各课均分*//*各生均分*/
+	int i,j,m,n,q;/*i,j 用于数据循环处理使用,q标记组数*/
+	int flag[MAXG][50]={{1}};
+	do{/*输入部分*/
+		scanf("%d %d",&info[group][0],&info[group][1]);
+		for(i=0;i<=info[group][0]-1;i++)
+			for(j=0;j<=info[group][1]-1;j++)
+				scanf("%d",&score[group][i][j]);
+		group++;
+	}while(group<=MAXG);
+	/*process*/
+	for(q=0;q<=group;q++){/*组数循环*/
+		m=info[q][1];n=info[q][0];
+		for(i=0;i<=m-1;i++)/*各科均分*/{
+			for(j=0;j<=n-1;j++)
+				sum+=score[q][j][i];
+			aver1[q][i]=sum/n;
+			sum=0;
+		}
+		for(i=0;i<=n-1;i++){
+			for(j=0;j<=m-1;j++){
+				sum+=score[q][i][j];
+				if (score[q][i][j]<=aver1[i]) flag[q][i]=0;
+			
+			}
+			aver2[q][i]=sum/m;
+			if (flag[q][i]) top++;
+			sum=0;
+		}	
+	}
+	/*output*/
+}
