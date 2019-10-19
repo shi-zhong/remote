@@ -29,6 +29,6 @@ int main(void){
 		
 	for(t=0;t<=g-1;t++){
 
-		rank(wealth,t,data[t][0],data[t][1]);
+		rank(wealth[t],t,data[t][0],data[t][1]);
 	}
 }
