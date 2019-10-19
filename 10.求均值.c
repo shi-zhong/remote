@@ -40,7 +40,7 @@ int main(void){
 	}
 
 	/*output*/
-	for(q=0;q<=group;q++){
+	for(q=0;q<=group-1;q++){
 		for(i=0;i<=info[q][0]-1;i++) printf("%.2f ",aver2[q][i]);
 		printf("\n");
 		for(i=0;i<=info[q][1]-1;i++) printf("%.2f ",aver1[q][i]);
